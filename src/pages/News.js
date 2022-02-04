@@ -8,14 +8,13 @@ const News = () => {
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
   const [error, setError] = useState(false);
-  const JSON_API = 'https://react-api-news-kotcherga.herokuapp.com/api/articles';
 
   useEffect(() => {
     getData();
   }, []);
 
   const getData = () => {
-    axios.get(JSON_API).then((res) => setNewsData(res.data));
+    axios.get('https://react-api-news-kotcherga.herokuapp.com/api/articles').then((res) => setNewsData(res.data));
   };
 
   const handleSubmit = (e) => {
@@ -24,7 +23,7 @@ const News = () => {
     if (content.length < 20) {
         setError(true);
     } else {
-      axios.post(JSON_API, {
+      axios.post('https://react-api-news-kotcherga.herokuapp.com/api/articles', {
         author,
         content,
         date: Date.now(),
