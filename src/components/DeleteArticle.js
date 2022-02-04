@@ -4,7 +4,7 @@ import React from 'react';
 const DeleteArticle = ({id}) => {
 
   const handleDelete = () => {
-    axios.delete('https://react-api-news-kotcherga.herokuapp.com/api/articles' + id);
+    axios.delete('https://crud-react-json-server.herokuapp.com/api/articles' + id);
     window.location.reload();
   };
 
