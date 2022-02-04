@@ -8,7 +8,7 @@ const News = () => {
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
   const [error, setError] = useState(false);
-  const JSON_API = 'https://react-api-news-kotcherga.herokuapp.com/api';
+  const JSON_API = 'https://react-api-news-kotcherga.herokuapp.com';
 
   useEffect(() => {
     getData();
