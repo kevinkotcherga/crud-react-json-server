@@ -14,7 +14,7 @@ const News = () => {
   }, []);
 
   const getData = () => {
-    axios.get('https://crud-react-json-server.herokuapp.com/api/').then((res) => setNewsData(res.data));
+    axios.get('https://crud-react-json-server.herokuapp.com/api/articles').then((res) => setNewsData(res.data));
   };
 
   const handleSubmit = (e) => {
@@ -23,7 +23,7 @@ const News = () => {
     if (content.length < 20) {
         setError(true);
     } else {
-      axios.post('https://crud-react-json-server.herokuapp.com/api/', {
+      axios.post('https://crud-react-json-server.herokuapp.com/api/articles', {
         author,
         content,
         date: Date.now(),
