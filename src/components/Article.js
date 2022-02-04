@@ -19,7 +19,7 @@ const Article = ({ article }) => {
     return newDate;
   };
 
-  const handleEdit = ({id}) => {
+  const handleEdit = () => {
     const data = {
       author: article.author,
       content: editedContent ? editedContent : article.content,
