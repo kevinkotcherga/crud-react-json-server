@@ -26,7 +26,7 @@ const Article = ({ article }) => {
       date: article.date,
     };
 
-    axios.put('https://crud-react-json-server.herokuapp.com/api' + article.id, data).then(() => {
+    axios.put("https://react-api-news-kotcherga.herokuapp.com/api/" + article.id, data).then(() => {
       setIsEditing(false);
     });
   };
