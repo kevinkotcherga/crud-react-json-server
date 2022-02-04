@@ -19,14 +19,14 @@ const Article = ({ article }) => {
     return newDate;
   };
 
-  const handleEdit = () => {
+  const handleEdit = ({id}) => {
     const data = {
       author: article.author,
       content: editedContent ? editedContent : article.content,
       date: article.date,
     };
 
-    axios.put(`https://react-api-news-kotcherga.herokuapp.com/api/articles/${article.id}`, data).then(() => {
+    axios.put(`https://crud-react-json-server.herokuapp.com/api/articles/${id}`, data).then(() => {
       setIsEditing(false);
     });
   };
